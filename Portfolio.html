@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nukphanny Vathana – Digital CV | Synthwave Edition</title>
+  <meta name="description" content="Digital CV of Nukphanny Vathana – MIS Student, Cybersecurity Learner, Database Designer."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+<div class="noise"></div>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<!-- BACK TO TOP -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg class="w-4 h-4" style="color:var(--cyan)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
+
+<!--DOWNLOAD-->
+<a id="dl-btn" href="/assets/docs/CV.pdf" download="CV.pdf" style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(0,229,255,0.08); border:1px solid rgba(0,229,255,0.25); color:var(--cyan); font-family:'Orbitron',sans-serif; font-size:0.72rem; font-weight:700; padding:0.7rem 1.6rem; border-radius:3px; letter-spacing:0.1em; transition:all 0.3s; text-decoration:none;" onmouseover="this.style.boxShadow='0 0 24px rgba(0,229,255,0.3)'" onmouseout="this.style.boxShadow='none'">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:14px;height:14px">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/>
+  </svg>
+  DOWNLOAD.PDF
+</a>
+
+<!-- NAV -->
+<nav class="syn-nav fixed top-0 left-0 right-0 z-50 px-6 py-4">
+  <div class="max-w-6xl mx-auto flex items-center justify-between relative">
+    <span class="nav-logo">NV://CV</span>
+    <div class="desktop-nav hidden md:flex gap-8">
+      <a href="#about"      class="nav-link">ABOUT</a>
+      <a href="#experience" class="nav-link">EXPERIENCE</a>
+      <a href="#education"  class="nav-link">EDUCATION</a>
+      <a href="#skills"     class="nav-link">SKILLS</a>
+      <a href="#projects"   class="nav-link">PROJECTS</a>
+      <a href="#references" class="nav-link">REFERENCES</a>
+    </div>
+    <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div id="mobile-menu">
+      <a href="#about"      class="nav-link text-sm" onclick="closeMobile()">ABOUT</a>
+      <a href="#experience" class="nav-link text-sm" onclick="closeMobile()">EXPERIENCE</a>
+      <a href="#education"  class="nav-link text-sm" onclick="closeMobile()">EDUCATION</a>
+      <a href="#skills"     class="nav-link text-sm" onclick="closeMobile()">SKILLS</a>
+      <a href="#projects"   class="nav-link text-sm" onclick="closeMobile()">PROJECTS</a>
+      <a href="#references" class="nav-link text-sm" onclick="closeMobile()">REFERENCES</a>
+    </div>
+  </div>
+</nav>
+
+<!--HERO-->
+<section id="about" class="relative min-h-screen flex items-center pt-24 pb-32 overflow-hidden">
+  <div class="grid-floor"></div>
+  <div class="grid-floor-2"></div>
+
+  <div class="max-w-6xl mx-auto px-6 w-full">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+      <!-- TEXT -->
+      <div class="order-2 md:order-1">
+        <div class="mb-5 reveal d1">
+          <span class="status-chip"><span class="blink-dot"></span>OPEN_TO_OPPORTUNITIES</span>
+        </div>
+
+        <div class="mb-2 reveal d1">
+          <span class="vhs-label">MANAGEMENT INFORMATION SYSTEMS</span>
+        </div>
+
+        <h1 class="glitch reveal d2" data-text="NUKPHANNY&#10;VATHANA"
+          style="font-size:clamp(2.5rem,6vw,4.5rem); line-height:1.05; color:#fff; margin-bottom:1.5rem; letter-spacing:0.05em;">
+          NUKPHANNY<br/>VATHANA
+        </h1>
+
+        <p class="font-mono text-xs mb-8 reveal d3" style="color:rgba(232,213,255,0.4); letter-spacing:0.12em;">
+          // MIS_STUDENT &nbsp;·&nbsp; Web Development &nbsp;·&nbsp; Technology Enthusiast
+        </p>
+
+        <!-- CONTACT -->
+        <div class="flex flex-col gap-4 mb-10 reveal d4">
+          <a href="tel:095627443" class="contact-row">
+            <div class="c-icon">
+              <svg class="w-4 h-4" style="color:var(--pink)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            095 627 443
+          </a>
+          <a href="mailto:nukphannyvathana@gmail.com" class="contact-row">
+            <div class="c-icon">
+              <svg class="w-4 h-4" style="color:var(--pink)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            nukphannyvathana@gmail.com
+          </a>
+          <div class="contact-row">
+            <div class="c-icon">
+              <svg class="w-4 h-4" style="color:var(--pink)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            Sankat Boeung Prolit, Khan Prampi Makara, Phnom Penh
+          </div>
+        </div>
+
+        <div class="flex gap-4 flex-wrap reveal d5">
+          <a href="#experience" style="background:rgba(255,0,110,0.1); border:1px solid rgba(255,0,110,0.4); color:var(--pink); font-family:'Orbitron',sans-serif; font-size:0.72rem; font-weight:700; padding:0.7rem 1.6rem; border-radius:3px; letter-spacing:0.1em; transition:all 0.3s; display:inline-block;" onmouseover="this.style.boxShadow='0 0 30px rgba(255,0,110,0.4)'" onmouseout="this.style.boxShadow='none'">
+            EXPERIENCE →
+          </a>
+          <a href="#skills" style="background:rgba(0,229,255,0.06); border:1px solid rgba(0,229,255,0.3); color:var(--cyan); font-family:'Orbitron',sans-serif; font-size:0.72rem; font-weight:700; padding:0.7rem 1.6rem; border-radius:3px; letter-spacing:0.1em; transition:all 0.3s; display:inline-block;" onmouseover="this.style.boxShadow='0 0 24px rgba(0,229,255,0.3)'" onmouseout="this.style.boxShadow='none'">
+            MY SKILLS
+          </a>
+        </div>
+      </div>
+
+      <!-- AVATAR -->
+      <div class="order-1 md:order-2 flex flex-col items-center gap-8 reveal d3">
+        <div class="avatar-neon">
+          <div class="avatar-inner">
+            <img src="/assets/Img/my_pic.jpg" alt="Nuk Phanny Vathana" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="flex gap-3 flex-wrap justify-center">
+          <span class="syn-tag syn-tag-pink">⚡ MIS STUDENT</span>
+          <span class="syn-tag syn-tag-cyan">🌐 Web Development</span>
+          <span class="syn-tag syn-tag-yellow">🛢 DATABASE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCROLL DOWN -->
+    <div class="flex flex-col items-center mt-20 gap-2 bounce opacity-40">
+      <span class="font-mono text-xs" style="color:var(--pink); letter-spacing:0.15em; font-size:0.55rem;">SCROLL DOWN</span>
+      <svg class="w-5 h-5" style="color:var(--pink)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider max-w-6xl mx-auto"></div>
+
+<!-- STATS -->
+<section class="py-14 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="syn-stat reveal d1">
+        <p class="neon-pink font-orbitron text-3xl font-black mb-1" style="font-family:'Orbitron',sans-serif;" data-count="2">0</p>
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; letter-spacing:0.2em; color:rgba(232,213,255,0.4);">YRS_LEARNING</p>
+      </div>
+      <div class="syn-stat reveal d2">
+        <p class="neon-cyan" style="font-family:'Orbitron',sans-serif; font-size:1.9rem; font-weight:900; margin-bottom:0.25rem;" data-count="12">0</p>
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; letter-spacing:0.2em; color:rgba(232,213,255,0.4);">TECH_SKILLS</p>
+      </div>
+      <div class="syn-stat reveal d3">
+        <p class="neon-yellow" style="font-family:'Orbitron',sans-serif; font-size:1.9rem; font-weight:900; margin-bottom:0.25rem;" data-count="3">0</p>
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; letter-spacing:0.2em; color:rgba(232,213,255,0.4);">EXPERIENCES</p>
+      </div>
+      <div class="syn-stat reveal d4">
+        <p style="font-family:'Orbitron',sans-serif; font-size:1.9rem; font-weight:900; margin-bottom:0.25rem; color:var(--purple); text-shadow:0 0 20px rgba(123,47,255,0.8);" data-count="2">0</p>
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; letter-spacing:0.2em; color:rgba(232,213,255,0.4);">LANGUAGES</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider max-w-6xl mx-auto"></div>
+
+<!-- PROFILE -->
+<section class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-10 items-start">
+      <div class="reveal">
+        <span class="vhs-label">PROFILE</span>
+        <h2 class="syn-section-title mt-2">ABOUT<br/>ME<span class="neon-pink">.</span></h2>
+      </div>
+      <div class="md:col-span-2 reveal d2">
+        <div class="neon-card p-8">
+          <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:var(--pink); letter-spacing:0.25em; margin-bottom:1.25rem;">// SUMMARY.TXT</p>
+          <p id="summary-text" class="word-fade" style="color:rgba(232,213,255,0.75); line-height:1.85; font-size:1rem;">
+            Detail oriented Web Developer and Setec Institute undergraduate possessing a strong appetite for continuous learning. Skilled in building responsive, accessible web pages and comfortable troubleshooting complex code. Seeking a junior role or internship to absorb industry best practices and support a senior engineering team.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider max-w-6xl mx-auto"></div>
+
+<!-- ═══════════════ EXPERIENCE ═══════════════ -->
+<section id="experience" class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-14">
+      <span class="vhs-label">WORK &amp; VOLUNTEERING</span>
+      <h2 class="syn-section-title mt-2">EXPERIENCE<span class="neon-cyan">.</span></h2>
+    </div>
+
+    <div class="space-y-7">
+
+      <div class="flex gap-6 reveal-left d1">
+        <div class="flex flex-col items-center">
+          <div class="retro-dot"></div>
+          <div class="retro-line flex-1 mt-2" style="min-height:70px;"></div>
+        </div>
+        <div class="neon-card p-6 flex-1 mb-2">
+          <div class="flex flex-wrap justify-between items-start mb-3 gap-2">
+            <div>
+              <h3 class="font-bold text-white text-lg" style="font-family:'Orbitron',sans-serif; font-size:0.95rem; letter-spacing:0.04em;">UNION YOUTH FEDERATION</h3>
+              <p style="color:var(--cyan); font-family:'Share Tech Mono',monospace; font-size:0.68rem; margin-top:0.3rem; letter-spacing:0.06em;">Sok An Mouyouksaphea High School · Takeo Province</p>
+            </div>
+            <span class="date-badge">2019 – 2024</span>
+          </div>
+          <p style="color:rgba(232,213,255,0.55); font-size:0.9rem; line-height:1.7;">Assessed school needs through direct communication with teachers and local leaders to prioritize the most impactful improvements for the community.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-6 reveal-right d2">
+        <div class="flex flex-col items-center">
+          <div class="retro-dot"></div>
+          <div class="retro-line flex-1 mt-2" style="min-height:50px;"></div>
+        </div>
+        <div class="neon-card p-6 flex-1 mb-2">
+          <div class="flex flex-wrap justify-between items-start mb-3 gap-2">
+            <div>
+              <h3 class="font-bold text-white" style="font-family:'Orbitron',sans-serif; font-size:0.95rem; letter-spacing:0.04em;">SOCCER LEAGUE VOLUNTEER</h3>
+              <p style="color:var(--cyan); font-family:'Share Tech Mono',monospace; font-size:0.68rem; margin-top:0.3rem; letter-spacing:0.06em;">Phnom Penh City</p>
+            </div>
+            <span class="date-badge">2025</span>
+          </div>
+          <p style="color:rgba(232,213,255,0.55); font-size:0.9rem; line-height:1.7;">Supported organized sports events at the national level, contributing to community engagement and teamwork.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-6 reveal-left d3">
+        <div class="flex flex-col items-center">
+          <div class="retro-dot"></div>
+        </div>
+        <div class="neon-card p-6 flex-1">
+          <div class="flex flex-wrap justify-between items-start mb-3 gap-2">
+            <div>
+              <h3 class="font-bold text-white" style="font-family:'Orbitron',sans-serif; font-size:0.95rem; letter-spacing:0.04em;">WALK FOR PEACE VOLUNTEER</h3>
+              <p style="color:var(--cyan); font-family:'Share Tech Mono',monospace; font-size:0.68rem; margin-top:0.3rem; letter-spacing:0.06em;">Phnom Penh City</p>
+            </div>
+            <span class="date-badge">2025</span>
+          </div>
+          <p style="color:rgba(232,213,255,0.55); font-size:0.9rem; line-height:1.7;">Demonstrated adaptability and problem-solving skills in a high-pressure, fast-paced environment to support national-level social goals.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider max-w-6xl mx-auto"></div>
+
+<!-- EDUCATION -->
+<section id="education" class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-14">
+      <span class="vhs-label">ACADEMIC JOURNEY</span>
+      <h2 class="syn-section-title mt-2">EDUCATION<span class="neon-pink">.</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="edu-card reveal-left d1">
+        <span style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:var(--pink); letter-spacing:0.2em;">2019 – 2024</span>
+        <h3 class="text-white font-bold mt-2 mb-1" style="font-family:'Orbitron',sans-serif; font-size:0.9rem; letter-spacing:0.04em;">HIGH SCHOOL BACHELOR</h3>
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:rgba(232,213,255,0.45);">Sok An Mouyouksaphea<br/>High School</p>
+      </div>
+
+      <div class="edu-card active-edu reveal d2">
+        <span style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:var(--cyan); letter-spacing:0.2em;">2024 – PRESENT</span>
+        <h3 class="text-white font-bold mt-2 mb-1" style="font-family:'Orbitron',sans-serif; font-size:0.9rem; letter-spacing:0.04em;">DEGREE / MIS</h3>
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:rgba(232,213,255,0.45);">SETEC Institute</p>
+        <span style="display:inline-block; margin-top:0.75rem; font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:var(--cyan); background:rgba(0,229,255,0.08); border:1px solid rgba(0,229,255,0.25); padding:0.2rem 0.6rem; border-radius:2px; letter-spacing:0.1em;">● CURRENT</span>
+      </div>
+
+      <div class="edu-card reveal-right d3" style="border-left-color:rgba(123,47,255,0.3);">
+        <span style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:var(--purple); letter-spacing:0.2em;">2025 – PRESENT</span>
+        <h3 class="text-white font-bold mt-2 mb-1" style="font-family:'Orbitron',sans-serif; font-size:0.9rem; letter-spacing:0.04em;">Web Application Development</h3>
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:rgba(232,213,255,0.45);">Aditi Academy</p>
+        <span style="display:inline-block; margin-top:0.75rem; font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:var(--cyan); background:rgba(0,229,255,0.08); border:1px solid rgba(0,229,255,0.25); padding:0.2rem 0.6rem; border-radius:2px; letter-spacing:0.1em;">● CURRENT</span>
+      </div>
+
+      <div class="edu-card reveal-right d3" style="border-left-color:rgba(123,47,255,0.3);">
+        <span style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:var(--purple); letter-spacing:0.2em;">2025</span>
+        <h3 class="text-white font-bold mt-2 mb-1" style="font-family:'Orbitron',sans-serif; font-size:0.9rem; letter-spacing:0.04em;">CYBER SECURITY</h3>
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.7rem; color:rgba(232,213,255,0.45);">Salacyber</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider max-w-6xl mx-auto"></div>
+
+<!-- SKILLS  -->
+<section id="skills" class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-14">
+      <span class="vhs-label">CAPABILITIES</span>
+      <h2 class="syn-section-title mt-2">SKILLS<span class="neon-yellow">.</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- TAGS -->
+      <div class="reveal-left d1">
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:rgba(232,213,255,0.3); letter-spacing:0.2em; margin-bottom:1.25rem;">// TECHNICAL SKILLS</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="syn-tag syn-tag-pink">🎨 PHOTOSHOP</span>
+          <span class="syn-tag syn-tag-pink">✏️ ILLUSTRATOR</span>
+          <span class="syn-tag syn-tag-cyan">💻 HARDWARE &amp; SW</span>
+          <span class="syn-tag syn-tag-cyan">🌐 HTML &amp; CSS</span>
+          <span class="syn-tag syn-tag-cyan">⚡ JAVASCRIPT</span>
+          <span class="syn-tag syn-tag-yellow">⚙️ C++</span>
+          <span class="syn-tag syn-tag-yellow">🔷 C#</span>
+          <span class="syn-tag syn-tag-cyan">🎨 VUE.JS</span>
+          <span class="syn-tag syn-tag-cyan">⚡ FASTAPI</span>
+          <span class="syn-tag syn-tag-pink">🔐 MALWARE ANALYSIS</span>
+          <span class="syn-tag syn-tag-cyan">🛢 DATABASE DESIGN</span>
+          <span class="syn-tag syn-tag-yellow">📊 SYSTEMS ANALYSIS</span>
+        </div>
+
+        <div class="mt-10">
+          <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:rgba(232,213,255,0.3); letter-spacing:0.2em; margin-bottom:1rem;">// LANGUAGES</p>
+          <div class="flex gap-3 flex-wrap">
+            <div class="lang-chip">🇰🇭 KHMER – NATIVE</div>
+            <div class="lang-chip">🇬🇧 ENGLISH – INTERMEDIATE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BARS -->
+      <div class="neon-card p-8 reveal-right d2">
+        <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:rgba(232,213,255,0.3); letter-spacing:0.2em; margin-bottom:1.75rem;">// PROFICIENCY_LEVELS.DAT</p>
+        <div class="space-y-7">
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <span style="font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--text);">Web Development</span>
+              <span class="neon-pink" style="font-family:'Share Tech Mono',monospace; font-size:0.72rem;">95%</span>
+            </div>
+            <div class="retro-bar-track"><div class="retro-bar-fill fill-pink" data-width="95"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <span style="font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--text);">DATABASE_DESIGN</span>
+              <span class="neon-pink" style="font-family:'Share Tech Mono',monospace; font-size:0.72rem;">80%</span>
+            </div>
+            <div class="retro-bar-track"><div class="retro-bar-fill fill-pink" data-width="80"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <span style="font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--text);">JAVASCRIPT</span>
+              <span class="neon-cyan" style="font-family:'Share Tech Mono',monospace; font-size:0.72rem;">76%</span>
+            </div>
+            <div class="retro-bar-track"><div class="retro-bar-fill fill-purple" data-width="76"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <span style="font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--text);">CYBER_SECURITY</span>
+              <span class="neon-cyan" style="font-family:'Share Tech Mono',monospace; font-size:0.72rem;">58%</span>
+            </div>
+            <div class="retro-bar-track"><div class="retro-bar-fill fill-cyan" data-width="58"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <span style="font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--text);">GRAPHIC_DESIGN</span>
+              <span class="neon-cyan" style="font-family:'Share Tech Mono',monospace; font-size:0.72rem;">75%</span>
+            </div>
+            <div class="retro-bar-track"><div class="retro-bar-fill fill-cyan" data-width="75"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <span style="font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--text);">SYSTEMS_ANALYSIS</span>
+              <span class="neon-yellow" style="font-family:'Share Tech Mono',monospace; font-size:0.72rem;">80%</span>
+            </div>
+            <div class="retro-bar-track"><div class="retro-bar-fill fill-yellow" data-width="80"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2">
+              <span style="font-family:'Share Tech Mono',monospace; font-size:0.72rem; color:var(--text);">C++ & C# PROGRAMMING</span>
+              <span class="neon-yellow" style="font-family:'Share Tech Mono',monospace; font-size:0.72rem;">60%</span>
+            </div>
+            <div class="retro-bar-track"><div class="retro-bar-fill fill-yellow" data-width="60"></div></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider max-w-6xl mx-auto"></div>
+
+<!-- PROJECTS  -->
+<section id="projects" class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-14">
+      <span class="vhs-label">PORTFOLIO</span>
+      <h2 class="syn-section-title mt-2">PROJECTS<span class="neon-cyan">.</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!--
+      <a href="#" class="neon-card p-6 reveal-left d1 block" style="text-decoration:none; color:inherit;">
+        <div class="flex flex-wrap justify-between items-start mb-4 gap-2">
+          <div>
+            <h3 class="font-bold text-white" style="font-family:'Orbitron',sans-serif; font-size:0.95rem; letter-spacing:0.04em;">Restaurants Digital Menu</h3>
+            <p style="color:var(--cyan); font-family:'Share Tech Mono',monospace; font-size:0.68rem; margin-top:0.3rem; letter-spacing:0.06em;">Database Design & Implementation</p>
+          </div>
+          <span class="date-badge">2026</span>
+        </div>
+        <p style="color:rgba(232,213,255,0.55); font-size:0.9rem; line-height:1.7; margin-bottom:1rem;">Designed and implemented a comprehensive relational database for a retail case study, including schema design, normalization, and SQL queries for business operations.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="syn-tag syn-tag-cyan">VUE.JS</span>
+          <span class="syn-tag syn-tag-cyan">FastAPI</span>
+          <span class="syn-tag syn-tag-cyan">DATABASE DESIGN</span>
+          <span class="syn-tag syn-tag-yellow">NORMALIZATION</span>
+        </div>
+      </a>
+      -->
+      <a href="https://nukphannyvathana.github.io/My_Digital_CV002/" class="neon-card p-6 reveal-right d2 block" style="text-decoration:none; color:inherit;">
+        <div class="flex flex-wrap justify-between items-start mb-4 gap-2">
+          <div>
+            <h3 class="font-bold text-white" style="font-family:'Orbitron',sans-serif; font-size:0.95rem; letter-spacing:0.04em;">DIGITAL CV PORTFOLIO</h3>
+            <p style="color:var(--cyan); font-family:'Share Tech Mono',monospace; font-size:0.68rem; margin-top:0.3rem; letter-spacing:0.06em;">Web Design & Frontend Development</p>
+          </div>
+          <span class="date-badge">2026</span>
+        </div>
+        <p style="color:rgba(232,213,255,0.55); font-size:0.9rem; line-height:1.7; margin-bottom:1rem;">Created a modern synthwave-themed interactive CV with smooth animations, responsive design, and PDF export functionality. Built from scratch with HTML, CSS, and JavaScript.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="syn-tag syn-tag-pink">HTML/CSS</span>
+          <span class="syn-tag syn-tag-pink">JAVASCRIPT</span>
+          <span class="syn-tag syn-tag-yellow">RESPONSIVE DESIGN</span>
+        </div>
+      </a>
+
+      <a href="/assets/docs/My CV.pdf" class="neon-card p-6 reveal-right d4 block" style="text-decoration:none; color:inherit;">
+        <div class="flex flex-wrap justify-between items-start mb-4 gap-2">
+          <div>
+            <h3 class="font-bold text-white" style="font-family:'Orbitron',sans-serif; font-size:0.95rem; letter-spacing:0.04em;">GRAPHIC DESIGN PORTFOLIO</h3>
+            <p style="color:var(--cyan); font-family:'Share Tech Mono',monospace; font-size:0.68rem; margin-top:0.3rem; letter-spacing:0.06em;">Creative Design & Branding</p>
+          </div>
+          <span class="date-badge">2025</span>
+        </div>
+        <p style="color:rgba(232,213,255,0.55); font-size:0.9rem; line-height:1.7; margin-bottom:1rem;">Designed various marketing materials, social media graphics, and branding assets using Adobe Creative Suite. Developed visual concepts for community and educational initiatives.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="syn-tag syn-tag-pink">PHOTOSHOP</span>
+          <span class="syn-tag syn-tag-pink">ILLUSTRATOR</span>
+          <span class="syn-tag syn-tag-yellow">BRANDING</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider max-w-6xl mx-auto"></div>
+
+<!-- REFERENCES  -->
+<section id="references" class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-14">
+      <span class="vhs-label">PEOPLE WHO KNOW ME</span>
+      <h2 class="syn-section-title mt-2">REFERENCES<span class="neon-pink">.</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-2xl">
+
+      <div class="flip-card reveal-left d1">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="w-16 h-16 flex items-center justify-center mb-4 text-2xl font-black" style="font-family:'Orbitron',sans-serif; background:rgba(255,0,110,0.1); border:2px solid rgba(255,0,110,0.3); border-radius:4px; color:var(--pink); text-shadow:0 0 12px var(--pink);">MC</div>
+            <h3 class="text-white font-bold text-center" style="font-family:'Orbitron',sans-serif; font-size:0.85rem; letter-spacing:0.04em;">MEAS CHANTHAVY</h3>
+            <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:rgba(232,213,255,0.35); margin-top:0.5rem; letter-spacing:0.1em;">HOVER TO REVEAL →</p>
+          </div>
+          <div class="flip-back">
+            <div class="text-center">
+              <div class="w-12 h-12 flex items-center justify-center mb-3 mx-auto font-black" style="font-family:'Orbitron',sans-serif; background:rgba(0,229,255,0.1); border:1px solid rgba(0,229,255,0.35); border-radius:4px; color:var(--cyan); font-size:0.9rem;">MC</div>
+              <h3 class="text-white font-bold mb-1" style="font-family:'Orbitron',sans-serif; font-size:0.8rem;">MEAS CHANTHAVY</h3>
+              <p class="neon-cyan mb-4" style="font-family:'Share Tech Mono',monospace; font-size:0.65rem;">FISHERIES ADMINISTRATION</p>
+              <div class="contact-row justify-center">
+                <div class="c-icon"><svg class="w-3 h-3" style="color:var(--cyan)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+                <span style="font-family:'Share Tech Mono',monospace; font-size:0.7rem;">010 997 038</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card reveal-right d2">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="w-16 h-16 flex items-center justify-center mb-4 text-2xl font-black" style="font-family:'Orbitron',sans-serif; background:rgba(123,47,255,0.1); border:2px solid rgba(123,47,255,0.3); border-radius:4px; color:var(--purple); text-shadow:0 0 12px var(--purple);">MS</div>
+            <h3 class="text-white font-bold text-center" style="font-family:'Orbitron',sans-serif; font-size:0.85rem; letter-spacing:0.04em;">MARK SOKKEA</h3>
+            <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:rgba(232,213,255,0.35); margin-top:0.5rem; letter-spacing:0.1em;">HOVER TO REVEAL →</p>
+          </div>
+          <div class="flip-back">
+            <div class="text-center">
+              <div class="w-12 h-12 flex items-center justify-center mb-3 mx-auto font-black" style="font-family:'Orbitron',sans-serif; background:rgba(123,47,255,0.15); border:1px solid rgba(123,47,255,0.4); border-radius:4px; color:var(--purple); font-size:0.9rem;">MS</div>
+              <h3 class="text-white font-bold mb-1" style="font-family:'Orbitron',sans-serif; font-size:0.8rem;">MARK SOKKEA</h3>
+              <p style="color:var(--purple); text-shadow:0 0 10px rgba(123,47,255,0.8); font-family:'Share Tech Mono',monospace; font-size:0.65rem; margin-bottom:1rem;">TEACHER · SOK AN HIGH SCHOOL</p>
+              <div class="contact-row justify-center">
+                <div class="c-icon"><svg class="w-3 h-3" style="color:var(--pink)" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+                <span style="font-family:'Share Tech Mono',monospace; font-size:0.7rem;">087 223 678</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 px-6 mt-6" style="border-top:1px solid rgba(255,0,110,0.12);">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <span class="nav-logo">NV://CV</span>
+      <p style="font-family:'Share Tech Mono',monospace; font-size:0.6rem; color:rgba(232,213,255,0.25); letter-spacing:0.2em;">NUKPHANNY VATHANA © 2025 · ALL RIGHTS RESERVED</p>
+      <div class="flex gap-6">
+        <a href="mailto:nukphannyvathana@gmail.com" class="nav-link" style="font-size:0.65rem;">EMAIL</a>
+        <a href="tel:095627443" class="nav-link" style="font-size:0.65rem;">CALL</a>
+        <a href="https://github.com/nukphannyvathana" target="_blank" class="nav-link" style="font-size:0.65rem;">GITHUB</a>
+      </div>
+    </div>
+    <div class="neon-divider mt-8"></div>
+    <p class="text-center mt-6" style="font-family:'Share Tech Mono',monospace; font-size:0.55rem; color:rgba(232,213,255,0.15); letter-spacing:0.2em;">MANAGEMENT INFORMATION SYSTEMS · SETEC INSTITUTE · PHNOM PENH · CAMBODIA</p>
+  </div>
+</footer>
+<script src="/assets/Js/script.js" defer></script>
+</body>
+</html>
